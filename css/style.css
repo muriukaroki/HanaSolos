@@ -1,83 +1,11 @@
-/* default custom styles */
-
-:root{
-    --mount-meadow: #1bbc9c;
-    --white-smoke: #f0f0f0;
-    --night-rider: #343434;
-    --black: #191b17;
-    --transition: all 0.5s ease-in-out;
-}
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
-html{
-    color: var(--black);
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
-}
-
-/* setup & reusable stylings */
-img{
-    width: 100%;
-}
-a{
-    text-decoration: none;
-    color: var(--black);
-}
-li{
-    list-style-type: none;
-}
-button{
-    cursor: pointer;
-    outline: 0;
-    background: transparent;
-}
-.container{
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-h1, h2, h3, h4, h5, h6{
-    margin: 0.6rem 0;
-    line-height: 1.25;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-.text{
-    margin: 0.6rem 0;
-    opacity: 0.8;
-}
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-section{
-    padding: 6.5rem 0;
-}
-.title{
-    padding: 0.6rem 0;
-    text-align: center;
-}
-.title h2{
-    font-size: 2.2rem;
-    color: var(--night-rider);
-}
-.title .text{
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-/* Start of nav bar styles */
 .navbar {
     background: #355C7D;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -103,18 +31,11 @@ section{
     padding: 0 50px;
 }
 
-/* .logo-image{
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -6px;
-} */
-
 #navbar__logo {
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -202,7 +123,7 @@ section{
     }
 
     .navbar__menu.active {
-        background: #131313;
+        background: #355C7D;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -253,6 +174,7 @@ section{
         right: 5%;
         transform: translate(5%, 20%);
     }
+
     .navbar__toggle .bar {
         display: block;
         cursor: pointer;
@@ -270,63 +192,86 @@ section{
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-/* End of nav bar styles */
 
-
-/* Hero section */
-.header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/header-bg.jpg);
+/* Hero Section */
+.hero {
+    background: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../images/Hero/alex-suprun-AHnhdjyTNGM-unsplash.jpg);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #fff;
+    padding: 200px 0;
+}
+
+.hero__container {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-}
-
-.hero-div{
-    flex: 1;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
     text-align: center;
+    padding: 30px;
 }
-.hero-div h1{
-    font-size: 2.55rem;
-    padding-bottom: 0.4rem;
-}
-.hero-div p{
-    color: var(--white-smoke);
-    font-size: 1.05rem;
-    letter-spacing: 3px;
-}
-.hero-btns{
-    margin-top: 2.8rem;
-}
-.hero-btns button{
-    border: 3.5px solid #fff;
-    border-radius: 2rem;
-    padding: 0.8rem 2rem;
-    text-transform: uppercase;
-}
-.btn-trans{
-    color: #fff;
-    transition: var(--transition);
-    display: none;
-}
-.btn-trans:hover{
-    background: var(--mount-meadow);
-    border-color: var(--mount-meadow);
-}
-.btn-white{
-    background: #fff;
-    color: var(--night-rider);
-    transition: var(--transition);
-}
-.btn-white:hover{
-    background: transparent;
+
+.hero__heading {
+    font-size: 100px;
+    margin-bottom: 24px;
     color: #fff;
 }
 
+.hero__heading span {
+    background: #ee0979; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #ff6a00,
+        #ee0979
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #ff6a00,
+        #ee0979
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
 
+.hero__description {
+    font-size: 60px;
+    background: #da22ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #9114ff,
+        #da22ff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #8f0eff,
+        #da22ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .hero__heading {
+        font-size: 60px;
+    }
+
+    .hero__description {
+        font-size: 40px;
+    }
+}
